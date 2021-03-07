@@ -1,0 +1,43 @@
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'Avengers: Endgame'	,2019	,'tt4154796',	'movie',	'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'Avengers: Age of Ultron',	2015	,'tt2395427'	,'movie',	'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'The Avengers',	1998,	'tt0118661'	,'movie'	,'https://m.media-amazon.com/images/M/MV5BYWE1NTdjOWQtYTQ2Ny00Nzc5LWExYzMtNmRlOThmOTE2N2I4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'The Avengers: Earths Mightiest Heroes',	2010,	'tt1626038',	'series',	'https://m.media-amazon.com/images/M/MV5BYzA4ZjVhYzctZmI0NC00ZmIxLWFmYTgtOGIxMDYxODhmMGQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'Ultimate Avengers: The Movie',	2006,	'tt0491703',	'movie',	'https://m.media-amazon.com/images/M/MV5BMTYyMjk0NTMwMl5BMl5BanBnXkFtZTgwNzY0NjAwNzE@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'Ultimate Avengers II',	2006	,'tt0803093',	'movie',	'https://m.media-amazon.com/images/M/MV5BZjI3MTI5ZTYtZmNmNy00OGZmLTlhNWMtNjZiYmYzNDhlOGRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'The Avengers',	1969,	'tt0054518',	'series',	'https://m.media-amazon.com/images/M/MV5BZWQwZTdjMDUtNTY1YS00MDI0LWFkNjYtZDA4MDdmZjdlMDRlXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg');
+
+insert into public."Movies"(title, year,imdbid,type,poster) values(
+'Avengers Assemble',	2019,	'tt2455546','series',	'https://m.media-amazon.com/images/M/MV5BMTY0NTUyMDQwOV5BMl5BanBnXkFtZTgwNjAwMTA0MDE@._V1_SX300.jpg');
+
+update public."Movies" set plot= 'Earths mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.', 
+director = 'Joss Whedon', 
+released='04 May 2012' 
+WHERE title = 'The Avengers'
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+update public."Movies" set plot= 'The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.', 
+director = 'Anthony Russo, Joe Russo', 
+released='27 Apr 2018' 
+WHERE title = 'Avengers: Infinity War'
+
+update public."Movies" set plot= 'After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.',  director = 'Anthony Russo, Joe Russo', 
+released='26 Apr 2019' 
+WHERE title = 'Avengers: Endgame'
+
+update public."Movies" set plot= 'After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.',  director = 'Anthony Russo, Joe Russo', released='26 Apr 2019' FROM  WHERE title = 'Avengers: Endgame'
+update public."Movies" set plot= 'After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.', set director = 'Anthony Russo, Joe Russo', set released='26 Apr 2019' FROM  WHERE title = 'Avengers: Endgame'
+

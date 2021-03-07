@@ -1,0 +1,36 @@
+CREATE TABLE Address (
+	Id SERIAL PRIMARY KEY,
+	userid character varying,
+	country character varying,
+	area character varying,
+	street character varying,
+	city character varying,
+	number INTEGER
+);
+
+CREATE TABLE Contact (
+	Id SERIAL PRIMARY KEY,
+	userid character varying,
+	name character varying,
+	birthdate character varying,
+	gender character varying,
+	email character varying
+);
+
+CREATE TABLE Movies (
+	Id SERIAL PRIMARY KEY,
+	title character varying,
+	year INTEGER,
+	imdbid character varying,
+	type character varying,
+	poster character varying,
+	plot character varying,
+	director character varying,
+	released character varying
+	);
+	
+CREATE TABLE Users( 
+	userid character varying,
+	username character varying,
+	pasword character varying
+	);

@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "ca55bd6e-7fc9-404c-98b6-3be7ea1b61cc",
+		"name": "Advance webdev project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Naresh11\",\r\n     \"pasword\": \"asdf@1234\",\r\n     \"name\":\"Naresh\", \r\n     \"birthdate\":\"2001-10-10\", \r\n     \"gender\":\"M\", \r\n     \"email\":\"a@gmail.com\",\r\n     \"country\":\"india\", \r\n     \"area\":\"jharkhand\", \r\n     \"street\":\"ranchi\",\r\n    \"city\":\"giridih\", \r\n    \"number\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/MovieRating/Naresh05",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/MovieRating/Naresh05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"MovieRating",
+						"Naresh05"
+					]
+				},
+				"description": "Get seen Movies from mongoDb"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/usersDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"username\": \"Naresh05\",\r\n    \"pasword\": \"asdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/usersDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usersDetails"
+					]
+				},
+				"description": "Get userDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/Movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/Movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Movies"
+					]
+				},
+				"description": "get Latest Movies"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/MovieRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rating\": \"5\",\r\n    \"userId\": \"Naresh05\",\r\n    \"MovieName\": \"Ave\",\r\n    \"poster\":\"https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/MovieRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"MovieRating"
+					]
+				},
+				"description": "Give rating to the seen movies"
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.omdbapi.com/?s=The+Dark+Knight&apikey=af8b62df",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.omdbapi.com/?s=The+Dark+Knight&apikey=af8b62df",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "The+Dark+Knight"
+						},
+						{
+							"key": "apikey",
+							"value": "af8b62df"
+						}
+					]
+				},
+				"description": "Recommendation movies"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/Movies/The Avengers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/Movies/The Avengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Movies",
+						"The Avengers"
+					]
+				},
+				"description": "Get movies deatils"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:8443/apiman-gateway/EpitaMsc/Backend-NodeJs/1.0/Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8443/apiman-gateway/EpitaMsc/Backend-NodeJs/1.0/Movies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"apiman-gateway",
+						"EpitaMsc",
+						"Backend-NodeJs",
+						"1.0",
+						"Movies"
+					]
+				},
+				"description": "Get Movies with Apiman gateway"
+			},
+			"response": []
+		}
+	]
+}
