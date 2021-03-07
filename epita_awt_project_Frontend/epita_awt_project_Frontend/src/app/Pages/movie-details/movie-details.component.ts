@@ -14,7 +14,7 @@ import { netfix_logo } from '../../Services/const';
 export class MovieDetailsComponent implements OnInit {
 
   subs: Subscription[] = [];
-  movieEntity: DetailsMovieEntity;
+  NewMovieEntity: DetailsMovieEntity;
   netflixLogo = netfix_logo;
   userid:any;
 
@@ -40,10 +40,11 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovieDetails(movieTitle: String) {
     console.table(`Movie title is : ${movieTitle}`);
-    this.movieService.getMovieDetails(movieTitle.replace(/ /g, "+")).subscribe(
+    this.movieService.getMovieDetails(movieTitle).subscribe(
       data => {
         console.table(data);
-        this.movieEntity = data;
+        this.NewMovieEntity = data;
+        console.log(this.NewMovieEntity);
       }
     )
   }

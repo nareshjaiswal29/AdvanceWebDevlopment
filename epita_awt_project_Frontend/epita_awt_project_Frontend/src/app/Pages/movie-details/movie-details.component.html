@@ -1,5 +1,5 @@
 <div class="movie-details-wrapper" [ngStyle]="{
-    'background-image':'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('+movieEntity.poster+')'
+    'background-image':'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('+NewMovieEntity[0].poster+')'
     }">
 
   <div class="header">
@@ -9,14 +9,14 @@
 
   <div class="movie-info">
     <div class="movie-details">
-      <h1>{{movieEntity.title}}</h1>
-      <p>{{movieEntity.plot}}</p>
+      <h1>{{NewMovieEntity[0].title}}</h1>
+      <p>{{NewMovieEntity[0].plot}}</p>
       <div class="movie-types">
         <h3>
-          <mat-icon>movie</mat-icon> {{movieEntity.director}}
+          <mat-icon>movie</mat-icon> {{NewMovieEntity[0].director}}
         </h3>
         <h3>
-          <mat-icon>calendar_today</mat-icon> {{movieEntity.released}}
+          <mat-icon>calendar_today</mat-icon> {{NewMovieEntity[0].released}}
         </h3>
         <h3>
           <mat-icon>attach_money</mat-icon> 
@@ -41,9 +41,9 @@
 
     </div>
     <div class="movie-Poster">
-      <img src="{{movieEntity.poster}}" alt="" srcset="">
+      <img src="{{NewMovieEntity[0].poster}}" alt="" srcset="">
 
-      <app-star movie_title="{{movieEntity.title}}" user_id="{{userid}}" movie_poster="{{movieEntity.poster}}" ></app-star>
+      <app-star movie_title="{{NewMovieEntity[0].title}}" user_id="{{userid}}" movie_poster="{{NewMovieEntity[0].poster}}" ></app-star>
     </div>
 
   </div>

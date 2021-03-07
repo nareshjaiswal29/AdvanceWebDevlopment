@@ -25,6 +25,7 @@ export class MovieService {
 
   getMovieDetails(movieTitle) {
    // return this.http.get<MovieEntity>(movieDeatils + movieTitle + "&apikey=" + apikey);
+   console.log(movieDeatils + "/" + movieTitle)
    return this.http.get<DetailsMovieEntity>(movieDeatils + "/" + movieTitle);
   }
 }
