@@ -8,14 +8,10 @@ const app_data = {
 }
 
 const endPoints = {
-    //latestMovies: "http://www.omdbapi.com/?s=Avengers&apikey=af8b62df",
     latestMovies: "http://localhost:5000/Movies",
     favorateMovies: "http://www.omdbapi.com/?s=The+Dark+Knight&apikey=af8b62df",
-    //movieDeatils: "http://www.omdbapi.com/?t=",
     movieDeatils: "http://localhost:5000/Movies",
-    //registerUser: "http://localhost:3000/api/register",
     registerUser: "http://localhost:5000/users",
-    //loginUser: "http://localhost:3000/api/login"
     loginUser: "http://localhost:5000/usersDetails",
     rateMovie: "http://localhost:5000/MovieRating",
     SeenFavMovies: "http://localhost:5000/MovieRating"
