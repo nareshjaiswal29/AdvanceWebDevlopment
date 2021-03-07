@@ -1,0 +1,86 @@
+.movie-details-wrapper{
+    width: 100vw;
+    height: 100vh;
+    filter: grayscale(50%);
+    background-size: cover;
+    background-position: center;
+    padding-top: 0.5vh;
+    overflow: hidden; 
+    padding-left: 7vw;
+    padding-right: 7vw;
+
+    .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        img{
+            height: 35px;
+            cursor: pointer;
+        }
+        .logo{
+            height: 150px;
+        }
+    }
+
+    .movie-info{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7vh;
+        padding-left: 2vw;
+
+        .movie-details{
+            width: 35vw;
+            color: #ddd9d9;
+            h1{
+                color: #fafafa;
+                font-size: xx-large;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            p{
+                font-size: large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .movie-types{
+                margin-top: 5vh;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                mat-icon{
+                transform: translateY(5px);
+                padding-right: 20px;}
+            }
+
+            .watch{
+                .watch-now{
+                margin-top: 4vh;
+                width: 100%;
+                    button{
+                        font-size: large;
+                        width: 30%;
+                        mat-icon{
+                            transform: translateY(5px);
+                            padding-right: 20px;}
+                    }
+                }
+
+            }
+        }
+
+        .movie-Poster{
+            display: flex;
+            flex-direction: column;
+            img{
+                height: 40vh;
+                box-shadow: -4px 4px 5px 0;
+                margin-right: 10vw;
+            }
+            
+        }
+
+    }
+}

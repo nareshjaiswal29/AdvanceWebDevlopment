@@ -1,0 +1,23 @@
+<div class="register_wrapper">
+  <div class="container" id="glass">
+    <h2>Sign-in</h2>
+    <form class="form">
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Username</mat-label>
+        <input [(ngModel)]="loginUserData.email" matInput type="text" name="email" id="" required>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="loginUserData.password" type="password" name="password" id="" required>
+      </mat-form-field>
+      <!-- <mat-form-field class="form-group">
+        <mat-label>Confirm password</mat-label>
+        <input matInput [(ngModel)]="loginUserData.confirm_password" type="password" name="confirm_password" id=""
+          required>
+      </mat-form-field> -->
+    </form>
+    <button mat-raised-button (click)=loginUser()>Sign IN</button>
+    <button mat-raised-button (click)=registerData()>Register</button>
+  </div>
+
+</div>

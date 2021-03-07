@@ -1,0 +1,66 @@
+<div class="register_wrapper">
+  <div class="container" id="glass">
+    <h2>Sign-up</h2>
+    <form class="form">
+      <div class="user_info">
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label class="email">Username</mat-label>
+          <input [(ngModel)]="registerUserData.username" matInput type="text" name="username" id="" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>Name</mat-label>
+          <input [(ngModel)]="registerUserConatct.name" matInput type="text" name="name" id="" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>Date Of Birth</mat-label>
+          <input matInput [(ngModel)]="registerUserConatct.birthDate" [matDatepicker]="picker" name="Date of birth"
+            id="" [max]="maxDate" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="multi-year" [startAt]="registerUserConatct.birthDate"></mat-datepicker>
+        </mat-form-field>
+
+        <mat-radio-group [(ngModel)]="registerUserConatct.gender" name="gender" color="primary">
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="registerUserConatct.email" matInput type="text" name="email" id="" required>
+        </mat-form-field>
+      </div>
+      <div class="user_address">
+       
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>Country</mat-label>
+          <input [(ngModel)]="registerUserAddress.country" matInput type="text" name="country" id="" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>Area</mat-label>
+          <input [(ngModel)]="registerUserAddress.area" matInput type="text" name="area" id="" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>City</mat-label>
+          <input [(ngModel)]="registerUserAddress.city" matInput type="text" name="city" id="" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+          <mat-label>Number</mat-label>
+          <input [(ngModel)]="registerUserAddress.number" matInput type="number" name="number" id="" required>
+        </mat-form-field>
+      </div>
+      <div class="user_pass">
+        <mat-form-field class="form-group">
+          <mat-label>Password</mat-label>
+          <input matInput [(ngModel)]="registerUserData.password" type="password" name="password" id="" required>
+        </mat-form-field>
+        <mat-form-field class="form-group">
+          <mat-label>Confirm password</mat-label>
+          <input matInput [(ngModel)]="registerUserData.confirm_password" type="password" name="confirm_password" id=""
+            required>
+        </mat-form-field>
+      </div>
+    </form>
+    <button mat-raised-button (click)=registerUser()>Sign UP</button>
+    <button mat-raised-button (click)=signIn()>Sign In</button>
+  </div>
+
+</div>

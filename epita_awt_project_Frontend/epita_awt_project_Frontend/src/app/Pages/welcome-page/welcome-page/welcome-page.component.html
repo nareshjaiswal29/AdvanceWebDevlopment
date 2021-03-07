@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="header">
+    <!-- Banner Area -->
+    <div class="header_banner" [ngStyle]="{
+        'background-image':'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)),url('+headerBGUrl+')'
+    }">
+      <h2>{{headerBGTitle}}</h2>
+
+      <div class="header_buttons">
+        <button class="play_button">
+          <mat-icon>arrow_right</mat-icon>
+          <span>Play</span>
+        </button>
+
+        <button class="more-button">
+          <mat-icon>info</mat-icon>
+          <span>More Info</span>
+        </button> 
+      </div>
+    </div>
+    <!-- banner - ends -->
+
+
+    <!-- Main area -->
+    <div class="header_main" id="stickyHeader" [class.sticky]="sticky" #stickyHeader>
+      <div class="header-left">
+        <a routerLink="/">
+          <img src= '../../../assets/Epiflix_logo.png' alt="logo" class="netflix_logo">
+        </a>
+        <ul>
+          <li class="active"><a href="#">Home</a> </li>
+          <li><a href="#">Shows</a> </li>
+          <li><a href="#">Movies</a> </li>
+          <li><a href="#">Latest</a> </li>
+          <li><a href="#">My List</a> </li>
+        </ul>
+      </div>
+      <div class="header-right">
+        <ul>
+          <!-- <li><a href="#">
+              <mat-icon>search</mat-icon>
+            </a> </li> -->
+          <li><a href="#">{{user_name}}</a> </li>
+         
+          <li><a href="#">
+              <mat-icon>notifications</mat-icon>
+            </a>
+          </li>
+          <li><a href="#">
+              <img src={{avatar}} alt="" srcset="" style="width: 30px;">
+            </a>
+          </li>
+          <li><a routerLink="/">
+            <mat-icon>logout</mat-icon>
+          </a>
+        </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- header main ends here -->
+  </div>
+
+  <div class="body" style="margin-top: 32rem;" *ngIf="loadSider">
+    <app-seen-slider title="Last seen" [movies]="favorate" [sliderConfig]="sliderConfig" [UserId]="user_name"></app-seen-slider>
+    <!-- <app-silder title="Last seen" [movies]="favorate" [sliderConfig]="sliderConfig"></app-silder> -->
+    <app-silder title="New" [movies]="latest" [sliderConfig]="sliderConfig" [UserId]="user_name"></app-silder>
+    <!-- <app-silder title="Recommendations" [movies]="favorate" [sliderConfig]="sliderConfig"></app-silder> -->
+    <app-recom-slider title="Recommendations" [movies]="Recom" [sliderConfig]="sliderConfig" [UserId]="user_name"></app-recom-slider>
+  </div>
+</div>
