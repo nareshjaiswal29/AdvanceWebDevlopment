@@ -27,7 +27,7 @@ export class RecomSliderComponent implements OnInit {
   }
 
   showMovieDetails(movieTitle, UserId) {
-    this.router.navigate(['/movieDetails', movieTitle, UserId]);
+    this.router.navigate(['/movieDetailsapi', movieTitle, UserId]);
   }
 
 }

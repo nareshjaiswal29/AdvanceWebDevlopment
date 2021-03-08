@@ -18,6 +18,7 @@ import { MovieDetailsComponent } from './Pages/movie-details/movie-details.compo
 import { StarComponent } from './Components/star/star.component';
 import { SeenSliderComponent } from './Components/seen-slider/seen-slider.component';
 import { RecomSliderComponent } from './Components/recom-slider/recom-slider.component';
+import { MoviedetailsapiComponent } from './Pages/moviedetailsapi/moviedetailsapi.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RecomSliderComponent } from './Components/recom-slider/recom-slider.com
     MovieDetailsComponent,
     StarComponent,
     SeenSliderComponent,
-    RecomSliderComponent
+    RecomSliderComponent,
+    MoviedetailsapiComponent
   ],
   imports: [
     BrowserModule,

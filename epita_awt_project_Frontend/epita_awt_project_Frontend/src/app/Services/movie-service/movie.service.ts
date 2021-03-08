@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { latestMovies, favorateMovies, movieDeatils, apikey, SeenFavMovies } from '../const';
+import { latestMovies, favorateMovies, movieDeatils, apikey, SeenFavMovies, movieApiDeatils } from '../const';
 import { MovieEntity, Movies, LstMovies, SeenMovies, DetailsMovieEntity } from '../../Model/movie'
 
 @Injectable({
@@ -28,4 +28,9 @@ export class MovieService {
    console.log(movieDeatils + "/" + movieTitle)
    return this.http.get<DetailsMovieEntity>(movieDeatils + "/" + movieTitle);
   }
+  getRecomMovieDetails(movieTitle) {
+    // return this.http.get<MovieEntity>(movieDeatils + movieTitle + "&apikey=" + apikey);
+    console.log(movieDeatils + "/" + movieTitle)
+    return this.http.get<MovieEntity>(movieApiDeatils + movieTitle + "&apikey=" + apikey);
+   }
 }

@@ -14,10 +14,11 @@ const endPoints = {
     registerUser: "http://localhost:5000/users",
     loginUser: "http://localhost:5000/usersDetails",
     rateMovie: "http://localhost:5000/MovieRating",
-    SeenFavMovies: "http://localhost:5000/MovieRating"
+    SeenFavMovies: "http://localhost:5000/MovieRating",
+    movieApiDeatils: "http://www.omdbapi.com/?t="
 }
 
 export const { netfix_logo, netflix_background, avatar, apikey } = app_data;
 
-export const { latestMovies, favorateMovies, movieDeatils, registerUser, loginUser, rateMovie, SeenFavMovies } = endPoints;
+export const { latestMovies, favorateMovies, movieDeatils, registerUser, loginUser, rateMovie, SeenFavMovies,movieApiDeatils } = endPoints;
 

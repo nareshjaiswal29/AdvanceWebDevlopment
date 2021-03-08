@@ -1,0 +1,50 @@
+<div class="movie-details-wrapper" [ngStyle]="{
+    'background-image':'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('+movieEntity.Poster+')'
+    }">
+
+  <div class="header">
+    <img class="logo" src="../../../assets/Epiflix_logo.png" alt="" (click)="goToWelcomeScreen()">
+    <img src="../../../assets/avatar.jpg" alt="" (click)="goToWelcomeScreen()">
+  </div>
+
+  <div class="movie-info">
+    <div class="movie-details">
+      <h1>{{movieEntity.Title}}</h1>
+      <p>{{movieEntity.Plot}}</p>
+      <div class="movie-types">
+        <h3>
+          <mat-icon>movie</mat-icon> {{movieEntity.Director}}
+        </h3>
+        <h3>
+          <mat-icon>calendar_today</mat-icon> {{movieEntity.Released}}
+        </h3>
+        <h3>
+          <mat-icon>attach_money</mat-icon> {{movieEntity.BoxOffice}}
+        </h3>
+      </div>
+
+      <div class="watch">
+        <div class="watch-now">
+          <button mat-raised-button color="primary">
+            <div class="play">
+              <mat-icon>play_arrow</mat-icon>
+              Play
+            </div>
+          </button>
+
+        </div>
+
+        <div class="download">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="movie-Poster">
+      <img src="{{movieEntity.Poster}}" alt="" srcset="">
+
+      <app-star movie_title="{{movieEntity.Title}}" user_id="{{userid}}" movie_poster="{{movieEntity.Poster}}" ></app-star>
+    </div>
+
+  </div>
+</div>
